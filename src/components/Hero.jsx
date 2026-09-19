@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowRight, ShieldCheck, MapPin } from 'lucide-react'
 import { SearchVisual } from './Visuals'
+import JusticeMotif from './JusticeMotif'
 import { brand, pillars } from '../data/content'
 import { useAuthModal } from '../context/AuthModalContext'
 import { MagneticButton, Reveal, ease } from './ui'
@@ -17,9 +18,18 @@ export default function Hero() {
       <div className="relative mx-auto grid w-full max-w-7xl gap-14 px-5 sm:px-8 lg:grid-cols-2 lg:items-center lg:gap-10 lg:px-12">
         <div>
           <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.6, ease }}
+            className="mb-3"
+          >
+            <JusticeMotif size={76} />
+          </motion.div>
+
+          <motion.div
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease }}
+            transition={{ duration: 0.6, ease, delay: 0.1 }}
             className="mb-7 flex flex-wrap items-center gap-2.5"
           >
             <span className="card inline-flex items-center gap-2.5 rounded-full py-1.5 pr-4 pl-2 text-sm text-ink-2">
