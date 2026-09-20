@@ -38,32 +38,30 @@ function CompareRow({ from, to, i }) {
 export default function Why() {
   return (
     <Section id="why" className="py-28 sm:py-36">
-      <div className="grid gap-12 lg:grid-cols-12 lg:gap-16">
-        <div className="lg:col-span-5">
-          <Reveal><Eyebrow>Why the market needs us</Eyebrow></Reveal>
-          <Words
-            text="Advocates lose hours to outdated, manual and fragmented research."
-            className="mt-6 font-serif text-3xl leading-[1.1] font-bold tracking-[-0.02em] text-ink sm:text-5xl"
-          />
-          <Reveal delay={0.2} className="mt-6 text-ink-2 leading-relaxed">
-            Law24x7 turns complex legal data into actionable legal intelligence — helping advocates and law firms work more efficiently.
-            <span className="mt-4 block text-sm font-bold tracking-[0.1em] text-coral uppercase">
-              Less time searching · More time on strategy
-            </span>
-          </Reveal>
-        </div>
-
-        <Reveal delay={0.1} className="lg:col-span-7">
-          <div className="card rounded-3xl p-5 sm:p-8">
-            <div className="mb-3 grid grid-cols-[1fr_auto_1fr] text-sm font-bold tracking-[0.16em] uppercase">
-              <span className="text-ink-3">The traditional way</span>
-              <span />
-              <span className="text-coral">The Law24x7 way</span>
-            </div>
-            {comparison.map((c, i) => <CompareRow key={c.from} {...c} i={i} />)}
-          </div>
+      <div className="mx-auto max-w-3xl text-center">
+        <Reveal><Eyebrow>Why the market needs us</Eyebrow></Reveal>
+        <Words
+          text="Advocates lose hours to outdated, manual and fragmented research."
+          className="mt-6 font-serif text-3xl leading-[1.1] font-bold tracking-[-0.02em] text-ink sm:text-5xl"
+        />
+        <Reveal delay={0.2} className="mt-6 text-lg text-ink-2 leading-relaxed">
+          Law24x7 turns complex legal data into actionable legal intelligence — helping advocates and law firms work more efficiently.
+        </Reveal>
+        <Reveal delay={0.25} className="mt-4 text-sm font-bold tracking-[0.1em] text-coral uppercase">
+          Less time searching · More time on strategy
         </Reveal>
       </div>
+
+      <Reveal delay={0.1} className="mx-auto mt-12 max-w-3xl">
+        <div className="card rounded-3xl p-5 sm:p-8">
+          <div className="mb-3 grid grid-cols-[1fr_auto_1fr] text-sm font-bold tracking-[0.16em] uppercase">
+            <span className="text-ink-3">The traditional way</span>
+            <span />
+            <span className="text-coral">The Law24x7 way</span>
+          </div>
+          {comparison.map((c, i) => <CompareRow key={c.from} {...c} i={i} />)}
+        </div>
+      </Reveal>
 
       {/* Impact stats */}
       <div className="mt-24 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">

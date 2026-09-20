@@ -13,13 +13,13 @@ const tints = [
 export default function Users() {
   return (
     <Section id="users" className="py-28 sm:py-36">
-      <div className="grid gap-10 lg:grid-cols-12">
-        <div className="lg:col-span-4">
-          <Reveal><Eyebrow color="navy">Target users</Eyebrow></Reveal>
-          <Words text="Built for every legal professional." className="mt-6 font-serif text-3xl leading-[1.1] font-bold tracking-[-0.02em] text-ink sm:text-4xl" />
-          <Reveal delay={0.2} className="mt-5 text-ink-2">Law24x7 empowers every legal professional and institution with faster, smarter and trustworthy legal intelligence.</Reveal>
-        </div>
-        <div className="grid gap-4 sm:grid-cols-2 lg:col-span-8">
+      <div className="mx-auto max-w-3xl text-center">
+        <Reveal><Eyebrow color="navy">Target users</Eyebrow></Reveal>
+        <Words text="Built for every legal professional." className="mt-6 font-serif text-3xl leading-[1.1] font-bold tracking-[-0.02em] text-ink sm:text-5xl" />
+        <Reveal delay={0.2} className="mt-5 text-lg text-ink-2">Law24x7 empowers every legal professional and institution with faster, smarter and trustworthy legal intelligence.</Reveal>
+      </div>
+      <div className="mt-12">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {users.map((u, i) => {
             const Icon = { Scale, Building2, GraduationCap, Briefcase }[u.icon]
             const t = tints[i % tints.length]
